@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useAppSelector } from '../../app/hooks';
 import { AppDispatch } from '../../app/store';
 import Post from './Post';
+import PostForm from './PostForm';
 import { fetchPostsAsync, selectPosts, selectStatus, Statuses } from './postSlice';
 
 function Posts() {
@@ -22,7 +23,7 @@ function Posts() {
     contents = <div className='py-6'>
       <div className='rounded border py-6 overflow-hidden shadow-lg'>
         <h3 className='text-sm'>{status}</h3>
-        {/* form goes here */}
+        <PostForm />
         {posts && posts.length > 0 && posts.map(post => {
           return <div key={post.id} style={{margin:'5em'}}>
             <Post 

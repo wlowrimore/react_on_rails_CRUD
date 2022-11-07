@@ -32,6 +32,3 @@ const Post = (props: any) => {
 }
 
 export default Post
-
-{/* <h3 className='w-full'>{post.title}</h3>
-            <p className='text-sm w-full'>{post.body}</p> */}
