@@ -50,7 +50,7 @@ const Post = (props: any) => {
 
   return (
     <div>
-      <div className='flex flex-row'>
+      <div className=''>
         <div className='col-8'>
           {isEditing ? editableTitle : titleElement}
         </div>
@@ -62,12 +62,12 @@ const Post = (props: any) => {
           />
         </div>
       </div>
-      <div className='flex flex-row'>
+      <div className=''>
         <div className='col-8'>
           {isEditing ? editableBody : bodyElement}
         </div>
       </div>
-      <div className='flex flex-row'>
+      <div className=''>
         <div className='col-2'>
           {isEditing ? submitButton : ''}
         </div>

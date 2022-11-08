@@ -1,12 +1,16 @@
 import './App.css';
+import Navbar from './app/components/navigation/Navbar';
 import Posts from './features/posts/Posts';
 
 
 function App() {
   return (
-    <div className="App text-4xl text-gray-500 font-semibold m-12">
-      <Posts />
-    </div>
+    <>
+    <Navbar />
+      <div className='App'>
+        <Posts />
+      </div>
+    </>
   )
 }
 
