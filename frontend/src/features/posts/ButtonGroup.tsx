@@ -14,8 +14,15 @@ function ButtonGroup(props:any) {
 
   return (
     <div className='btn-group float-end'>
-      <button className='bg-blue-200 text-gray-800 px-2 rounded-md'>Edit</button>
-      <button className='bg-red-300 text-gray-800 px-2 rounded-md' onClick={(e) => handleClick(e)}>Delete</button>
+      <button 
+        className='bg-blue-200 text-gray-800 px-2 rounded-md' 
+        onClick={() => props.toggleEditForm()}>Edit
+      </button>
+
+      <button 
+        className='bg-red-300 text-gray-800 px-2 rounded-md' 
+        onClick={(e) => handleClick(e)}>Delete
+      </button>
     </div>
   )
 }
