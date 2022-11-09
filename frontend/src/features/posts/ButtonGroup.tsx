@@ -13,7 +13,7 @@ function ButtonGroup(props:any) {
   }
 
   return (
-    <div className='btn-group float-end'>
+    <div className=''>
       <button 
         className='bg-blue-200 text-gray-800 px-2 rounded-md' 
         onClick={() => props.toggleEditForm()}>Edit

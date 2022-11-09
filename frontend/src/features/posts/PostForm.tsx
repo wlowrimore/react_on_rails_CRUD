@@ -27,22 +27,23 @@ const PostForm = () => {
   
   return (
     <div>
-      <h1>Post Form</h1>
-      <form>
+      <h1 className='text-xl pt-6 px-8 uppercase'>tilis</h1>
+      <form className='px-8'>
         <input 
           type='text'
-          className='shadow appearance-none border rounded w-full py-2 px-3 text-start text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+          className='my-4 shadow appearance-none border rounded w-full py-1 px-2 text-start text-gray-700 leading-tight focus:outline-none focus:shadow-outline' placeholder='entity'
           name='title'
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
         <textarea
-          className='shadow appearance-none border rounded w-full py-2 px-3 text-start text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+          className='shadow appearance-none border rounded w-full py-1 px-2 text-start text-gray-700 leading-tight focus:outline-none focus:shadow-outline' placeholder='comment'
           name='body'
           value={body}
           onChange={(e) => setBody(e.target.value)}
         />
         <button
+          className='mt-2 mb-8 rounded px-2 bg-blue-200 shadow hover:shadow-none hover:bg-gray-300 ease-in duration-200'
           type='submit'
           onClick={(e) => submitHandler(e)}>Submit</button>
       </form>

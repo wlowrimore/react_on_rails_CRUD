@@ -35,9 +35,9 @@ function Posts() {
   if (status !== Statuses.UpToDate) {
     contents = <div>{status}</div>
   } else {
-    contents = <div className='py-6'>
-      <div className='rounded border py-6 overflow-hidden shadow-lg'>
-        <h3 className='text-sm'>{status}</h3>
+    contents = <div className=' bg-gray-100'>
+      <div className='w-full rounded border shadow-lg'>
+        <h3 className='text-sm text-center text-green-400'>{status}</h3>
         <PostForm />
         {posts && posts.length > 0 && posts.map(post => {
           return <div key={post.id} style={{margin:'5em'}}>
@@ -53,7 +53,8 @@ function Posts() {
       </div>
     </div>
   }
-  return <div><h1>Posts</h1>
+  return <div className='flex flex-col'>
+    <h1 className='flex flex-start pt-[5em] pb-4 text-xl'>Posts</h1>
     {contents}
   </div>
 }

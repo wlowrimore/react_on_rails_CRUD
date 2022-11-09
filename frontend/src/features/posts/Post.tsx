@@ -33,42 +33,42 @@ const Post = (props: any) => {
 
   const editableTitle = <input 
                           type='text'
-                          className='shadow appearance-none border rounded text-start w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                          className='shadow appearance-none border rounded text-sm text-start w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                           value={title}
                           onChange={(e) => setTitle(props.post.title)}/>;
 
   const editableBody = <textarea 
-                          className='shadow appearance-none border rounded text-start w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                          className='shadow appearance-none border rounded text-md text-start w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                           value={body}
                           onChange={(e) => setBody(e.target.value)}/>;
 
   const submitButton = <button 
                           type='submit'
-                          className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                          className='mt-2 mb-8 w-full rounded px-2 bg-blue-200 shadow hover:shadow-none hover:bg-gray-300 ease-in duration-200'
                           onClick={(e) => submitHandler(e)}>Submit</button>
                         
 
   return (
-    <div>
+    <div className='w-full h-full grid grid-cols-3'>
       <div className=''>
-        <div className='col-8'>
+        <div className='pb-6 text-xl'>
           {isEditing ? editableTitle : titleElement}
         </div>
-        <div className='col-4'>
+        <div className='col-span-4 border-b'>
+          {isEditing ? editableBody : bodyElement}
+        </div>
+      </div>
+      <div className='h-full col-span-2'>
+        <div className='h-full flex flex-row justify-end items-end'>
           <ButtonGroup 
             post_id={props.post.id}
             dispatch={props.dispatch}
             toggleEditForm={props.toggleEditForm}
-          />
+            />
         </div>
       </div>
-      <div className=''>
-        <div className='col-8'>
-          {isEditing ? editableBody : bodyElement}
-        </div>
-      </div>
-      <div className=''>
-        <div className='col-2'>
+      <div className='pb-4'>
+        <div className=''>
           {isEditing ? submitButton : ''}
         </div>
       </div>

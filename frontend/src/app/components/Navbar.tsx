@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div>
+    <div className='fixed w-screen'>
       <nav className="bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -15,27 +15,27 @@ const Navbar = () => {
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <a
-                    href="#"
-                    className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                    href="/"
+                    className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
                   >
-                    Dashboard
+                    home
                   </a>
 
                   <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    href="/posts"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
                   >
-                    Team
+                    posts
                   </a>
 
                   <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    href="/categories"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
                   >
-                    Projects
+                    categories
                   </a>
 
-                  <a
+                  {/* <a
                     href="#"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
@@ -47,10 +47,25 @@ const Navbar = () => {
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Reports
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
+                <div className="ml-10 flex items-baseline space-x-4">
+                  <a
+                    href="/auth/singup"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
+                  >
+                    sign up
+                  </a>
+
+                  <a
+                    href="auth/login"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
+                  >
+                    login
+                  </a>
+                </div>
             <div className="-mr-2 flex md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -111,39 +126,39 @@ const Navbar = () => {
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a
-                  href="#"
-                  className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
+                  href="/"
+                  className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium uppercase"
                 >
-                  Dashboard
+                  home
                 </a>
 
                 <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  href="/posts"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium uppercase"
                 >
-                  Team
+                  posts
                 </a>
 
                 <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  href="/categories"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium uppercase"
                 >
-                  Projects
+                  categories
                 </a>
 
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                {/* <a
+                  href="/auth/signup"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium uppercase"
                 >
-                  Calendar
-                </a>
+                  sign up
+                </a> */}
 
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                {/* <a
+                  href="/auth/login"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium uppercase"
                 >
-                  Reports
-                </a>
+                  login
+                </a> */}
               </div>
             </div>
           )}
